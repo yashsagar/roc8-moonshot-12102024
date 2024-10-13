@@ -1,3 +1,3 @@
-export default function render(element, container) {
+export function render(element, container) {
   container.replaceChildren(element);
 }

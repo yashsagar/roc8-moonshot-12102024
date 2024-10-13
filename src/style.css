@@ -9,8 +9,31 @@
 :root {
   --accent: #e54065;
   --bgDefault: #f4f5f9;
-  --bgFilter: #e1e4ea;
+  --bgFilterBtn: #e1e4ea;
   --bgRead: #f2f2f2;
   --border: #cfd2dc;
   --text: #636363;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media ("min-width: 800px") {
+  .wrapper:has(.read-area) {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+.wrapper:has(.read-area) {
+  grid-template-columns: 2fr 3fr;
+}
+
+.test {
+  border: 1px solid red;
 }

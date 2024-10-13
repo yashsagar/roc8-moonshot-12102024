@@ -1,8 +1,4 @@
-export default function createElement({
-  tag = "div",
-  attribute = {},
-  content,
-}) {
+export function createElement({ tag = "div", attribute = {}, children = "" }) {
   const element = document.createElement(tag);
   const attributeKey = Object.keys(attribute);
   if (attributeKey.length) {
@@ -11,6 +7,13 @@ export default function createElement({
     });
   }
 
-  element.innerText = content;
+  if (typeof children === "object") {
+    children.map((child) => {
+      element.append(createElement(child));
+    });
+  } else {
+    element.innerText = children;
+  }
+
   return element;
 }
