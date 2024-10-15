@@ -1,0 +1,60 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
+  \*****************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap);
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css (1) ***!
+  \*********************************************************************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+:root {
+  --accent: #e54065;
+  --bgDefault: #f4f5f9;
+  --bgFilterBtn: #e1e4ea;
+  --bgRead: #f2f2f2;
+  --border: #cfd2dc;
+  --text: #636363;
+  --textBlack: #000000d8;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.wrapper:has(.read-area) {
+  grid-template-columns: min(30%, 400px) minmax(60%, 1000px);
+}
+
+.wrapper:has(.read-area) .active {
+  border: 2px solid var(--accent) !important;
+}
+
+#read-area {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#read-area::-webkit-scrollbar {
+  display: none;
+}
+
+.test {
+  border: 1px solid #000000d8;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+
