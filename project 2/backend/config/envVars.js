@@ -1,6 +1,6 @@
-import dotenv from "dotenv";
+import dotenvFlow from "dotenv-flow";
 
-dotenv.config();
+dotenvFlow.config();
 
 export const ENV_VARS = {
   MONGO_URI: process.env.MONGO_URI,

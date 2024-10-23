@@ -12,9 +12,7 @@ dist
 dist-ssr
 *.local
 
-.env
-production.env
-development.env
+
 
 
 
@@ -28,4 +26,3 @@ development.env
 *.njsproj
 *.sln
 *.sw?
-.env
